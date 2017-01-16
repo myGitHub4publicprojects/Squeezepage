@@ -3,10 +3,31 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-content for authenticated users
+  <div class="container">
+    {% if queryset %}
+      <h2>Welcome staff member</h2>
+      <h3>List of signups:</h3>
+      <table class="table">
+        <tr>
+          <td>Full name</td>
+          <td>Email</td>
+          <td>signed up time</td>
+        </tr>
+        {% for i in queryset %}
+        <tr>
+          <td>{{ i.full_name }}</td>
+          <td>{{ i.email }}</td>
+          <td>{{ i.timestamp }}</td>
+        </tr>
+        {% endfor %} 
+      </table>
 
+    {% else %}
+    <h2>Welcome member</h2>
+    {% endif %}
 
-
+  <p class="lead">Members only material:</p>
+  </div>
 {% else %}
 <div class="bluewide">
 <!-- Main component for a primary marketing message or call to action -->

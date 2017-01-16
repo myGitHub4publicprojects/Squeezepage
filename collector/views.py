@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from .forms import SignUpForm
 from django.core.mail import send_mail
 from django.conf import settings
+from .models import SignUp
 
 def home(request):
     form = SignUpForm(request.POST or None)
@@ -24,10 +25,8 @@ def home(request):
         return HttpResponseRedirect('thank_you')
     
     if request.user.is_staff:
-        queryset = 'queryset' #signups
-        context = {}
-
-
+        queryset = SignUp.objects.all()
+        context = {'queryset': queryset}
 
     return render(request, 'collector/home.html', context)
 
