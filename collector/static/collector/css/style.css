@@ -1,0 +1,80 @@
+body {
+    padding-bottom: 3%;
+}
+
+.navbar-header {
+    padding-bottom: 1em;
+}
+
+.navbar-brand img {
+    height: 34px;
+}
+
+.navbar-default {
+    background-color: #fff;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.bluewide {
+    background-color: #0082cd;
+    margin-bottom: 2%;
+    }
+
+.container {
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+#lady {
+    background-image: url(../img/lady.jpg);
+    background-size: 90%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding-bottom: 5%;
+}
+
+#lady h2 {
+    margin-top: 2.5em;
+}
+
+#lady p, #lady li {
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+#signup {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px 10px;
+    color: #000;
+    margin-top: 30%;
+}
+
+#signup input {
+    font-size: 0.7em;
+}
+
+#signup label {
+    display: block;
+    color: #000;
+    font-weight: 100;
+    font-size: 0.7em;
+}
+
+#signup #signupsubmit {
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+#companies {
+    margin-bottom: 5%;
+}
+
+#companies .img-responsive {
+    padding-top: 30px;
+}

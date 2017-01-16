@@ -1,0 +1,6 @@
+
+*.pyc
+__pycache__
+db.sqlite3
+/static/collector/img
+.DS_Store

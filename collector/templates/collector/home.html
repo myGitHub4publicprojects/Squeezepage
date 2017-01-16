@@ -1,0 +1,79 @@
+{% extends 'collector/base.html' %}
+{% load static %}
+
+{% block content %}
+{% if user.is_authenticated %}
+content for authenticated users
+
+
+
+{% else %}
+<div class="bluewide">
+<!-- Main component for a primary marketing message or call to action -->
+      <div id="lady" class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h2>Blended Learning Guide</h2>
+            <p>Do you want to provide online training and also maintain an in-person
+               training program? This blended learning approach can be very effective
+                and can help keep costs down.</p>
+            <h3>The free white paper will teach you:</h3>
+            <ul>
+              <li>Tips for successful blended learning</li>
+              <li>The ideal course length</li>
+              <li>Blended learning best practices</li>
+            </ul>
+          </div>
+          <div class="col-md-3 pull-right">
+            <div id="signup">
+            <form class="form-vertical" method="POST">{% csrf_token %}
+            {{ form.as_p }}
+            <input id="signupsubmit" class="btn btn-warning" type="submit" value="GET MY FREE WHITEPAPER" >
+            </form>
+            </div>
+          </div>
+        </div>
+      </div> <!--</div lady>-->
+
+</div> <!-- /bluewide -->
+
+      <div id="companies" class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h4 class="text-center">TRUSTED BY OVER 1,000 COMPANIES</h4>
+            <div class="row">
+              <div class="col-md-3">
+                <img src="{% static 'collector/img/logo_apple.png' %}" class="img-responsive center-block">
+              </div>
+              <div class="col-md-3">
+                <img src="{% static 'collector/img/dyson.png' %}" class="img-responsive center-block">
+              </div>
+              <div class="col-md-3">
+                <img src="{% static 'collector/img/logo_johnsonjohnson.png' %}" class="img-responsive center-block">
+              </div>
+              <div class="col-md-3">
+                <img src="{% static 'collector/img/logo_kelloggs_blackandwhite.png' %}" class="img-responsive center-block">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <img src="{% static 'collector/img/logo_microsoft.png' %}" class="img-responsive center-block">
+              </div>
+              <div class="col-md-3">
+                <img src="{% static 'collector/img/logo_pbs.png' %}" class="img-responsive center-block">
+              </div>
+              <div class="col-md-3">
+                <img src="{% static 'collector/img/uber-side-4.png' %}" class="img-responsive center-block">
+              </div>
+              <div class="col-md-3">
+                <img src="{% static 'collector/img/logo_ebay.png' %}" class="img-responsive center-block">
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+
+
+{% endif %}
+{% endblock content %}
