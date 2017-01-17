@@ -30,11 +30,8 @@ def home(request):
 
     return render(request, 'collector/home.html', context)
 
-def login(request):
-    return render(request, 'collector/login.html', {})
-
-def register(request):
-    return render(request, 'collector/register.html', {})
+def privacy_policy(request):
+    return render(request, 'collector/privacy_policy.html', {})
 
 def thank_you(request):
     return render(request, 'collector/thank_you.html', {})

@@ -42,9 +42,8 @@ body {
 }
 
 #lady p, #lady li {
-    font-family: 'Open Sans',sans-serif;
-    font-weight: 100;
-    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
 }
 
 #signup {
@@ -69,6 +68,10 @@ body {
     font-weight: bold;
     color: #fff;
     font-size: 0.9em;
+}
+
+#icons {
+    margin-bottom: 3%;
 }
 
 #companies {

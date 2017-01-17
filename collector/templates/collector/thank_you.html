@@ -1,1 +1,9 @@
-Thank you
+{% extends 'collector/base.html' %}
+
+{% block content %}
+<div class="container">
+<h1 class="text-center">Thank you</h1>
+<p class="lead">An email has been sent to you with a link to training materials you requested.</p>
+<p>You can register <a href="{% url 'registration_register' %}">here</a> to have access to all our materials</p>
+</div>
+{% endblock content %}
