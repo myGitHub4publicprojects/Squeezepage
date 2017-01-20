@@ -8,16 +8,16 @@ from .models import SignUp
 def home(request):
     form = SignUpForm(request.POST or None)
     context = {
-        'form': form,
-        'title': 'title'
+        'form': form
         }
     
     if form.is_valid():
         email = form.cleaned_data.get("email")
+        full_name = form.cleaned_data.get("full_name")
         form.save()
         send_mail(
-            'Subject of the mail',
-            'Here is the body of the email',
+            'Thank you for your interest',
+            'Dear %s,\nhere is the link to our training program:\nhttp:someurl \nKind Regards XYZ Team'%full_name,
             settings.EMAIL_HOST_USER,
             [email],
             fail_silently=False,

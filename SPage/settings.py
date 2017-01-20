@@ -137,6 +137,7 @@ STATICFILES_DIRS = (
 # django registration redux
 ACCOUNT_ACTIVATION_DAYS = 7
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # for 'django.contrib.sites'
 SITE_ID = 1
