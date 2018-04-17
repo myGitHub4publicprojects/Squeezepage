@@ -7,10 +7,7 @@ from .models import SignUp
 
 def home(request):
     form = SignUpForm(request.POST or None)
-    context = {
-        'form': form
-        }
-    
+    context = {'form': form}
     if form.is_valid():
         email = form.cleaned_data.get("email")
         full_name = form.cleaned_data.get("full_name")
@@ -25,8 +22,7 @@ def home(request):
         return HttpResponseRedirect('thank_you')
     
     if request.user.is_staff:
-        queryset = SignUp.objects.all()
-        context = {'queryset': queryset}
+        context = {'queryset': SignUp.objects.all()}
 
     return render(request, 'collector/home.html', context)
 
